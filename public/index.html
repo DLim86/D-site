@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="D. Lim — Software Developer based in Singapore. Portfolio of projects, skills, and open source work." />
-  <title>D. Lim — Portfolio</title>
+  <meta name="description" content="David Lim — Software Developer based in Singapore. Portfolio of projects, skills, and open source work." />
+  <title>David Lim — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -15,7 +15,10 @@
 
     <aside class="sidebar" aria-label="Site navigation">
       <div class="sidebar-inner">
-        <a href="#hero" class="wordmark" aria-label="D. Lim — back to top">D. Lim</a>
+        <div class="wordmark-wrap">
+          <span class="wordmark-init" aria-hidden="true">DL</span>
+          <a href="#hero" class="wordmark" aria-label="David Lim — back to top">David Lim</a>
+        </div>
         <nav aria-label="Sections">
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
@@ -49,8 +52,13 @@
 
       <section id="hero">
         <div class="hero-inner">
+          <div class="hero-avatar" aria-hidden="true">DL</div>
+          <span class="available-badge">
+            <span class="badge-dot" aria-hidden="true"></span>
+            Open to opportunities
+          </span>
           <p class="hero-eyebrow">Software Developer</p>
-          <h1>D. Lim</h1>
+          <h1>David Lim</h1>
           <p class="hero-tagline">
             Building clean, purposeful software —<br />
             from full-stack web apps to data pipelines.
@@ -89,40 +97,44 @@
         <div class="skills-grid">
           <div class="skill-group">
             <h3>Languages</h3>
-            <ul>
-              <li>Python</li>
-              <li>JavaScript / TypeScript</li>
-              <li>Java</li>
-              <li>C / C++</li>
-              <li>SQL</li>
-            </ul>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">C / C++</span>
+              <span class="skill-tag">SQL</span>
+            </div>
           </div>
           <div class="skill-group">
             <h3>Web &amp; APIs</h3>
-            <ul>
-              <li>HTML &amp; CSS</li>
-              <li>React</li>
-              <li>Node.js / Express</li>
-              <li>REST &amp; GraphQL</li>
-            </ul>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML &amp; CSS</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express</span>
+              <span class="skill-tag">REST</span>
+              <span class="skill-tag">GraphQL</span>
+            </div>
           </div>
           <div class="skill-group">
             <h3>Data &amp; ML</h3>
-            <ul>
-              <li>pandas / NumPy</li>
-              <li>scikit-learn</li>
-              <li>PyTorch</li>
-              <li>PostgreSQL</li>
-            </ul>
+            <div class="skill-tags">
+              <span class="skill-tag">pandas</span>
+              <span class="skill-tag">NumPy</span>
+              <span class="skill-tag">scikit-learn</span>
+              <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">PostgreSQL</span>
+            </div>
           </div>
           <div class="skill-group">
             <h3>Tools</h3>
-            <ul>
-              <li>Git &amp; GitHub</li>
-              <li>Docker</li>
-              <li>Linux</li>
-              <li>GitHub Actions</li>
-            </ul>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Linux</span>
+              <span class="skill-tag">GitHub Actions</span>
+            </div>
           </div>
         </div>
       </section>
@@ -135,6 +147,7 @@
             <h3>
               <a href="https://github.com/DLim86" target="_blank" rel="noopener noreferrer">
                 Campus Event Platform
+                <span class="project-arrow" aria-hidden="true">→</span>
               </a>
             </h3>
             <p class="project-desc">
@@ -148,6 +161,7 @@
             <h3>
               <a href="https://github.com/DLim86" target="_blank" rel="noopener noreferrer">
                 Feedback Classifier
+                <span class="project-arrow" aria-hidden="true">→</span>
               </a>
             </h3>
             <p class="project-desc">
@@ -161,6 +175,7 @@
             <h3>
               <a href="https://github.com/DLim86" target="_blank" rel="noopener noreferrer">
                 Task Tracker CLI
+                <span class="project-arrow" aria-hidden="true">→</span>
               </a>
             </h3>
             <p class="project-desc">
