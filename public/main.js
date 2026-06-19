@@ -91,7 +91,7 @@ async function loadRepos() {
 }
 
 function initNav() {
-  const links = [...document.querySelectorAll('.sidebar nav a')];
+  const links = [...document.querySelectorAll('.topnav-nav a')];
   const sections = [...document.querySelectorAll('main section[id]')];
   if (!links.length || !sections.length) return;
 

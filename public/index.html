@@ -11,227 +11,226 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="layout">
 
-    <aside class="sidebar" aria-label="Site navigation">
-      <div class="sidebar-inner">
-        <div class="wordmark-wrap">
-          <span class="wordmark-init" aria-hidden="true">DL</span>
-          <a href="#hero" class="wordmark" aria-label="David Lim — back to top">David Lim</a>
-        </div>
-        <nav aria-label="Sections">
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#repos">Open Source</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <div class="sidebar-links" aria-label="Quick links">
-          <a href="mailto:davlim86@gmail.com">Email</a>
-          <a href="https://github.com/DLim86" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/david-lim-22814141" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  <!-- ── Top navigation ── -->
+  <header class="topnav" id="topnav">
+    <div class="topnav-inner">
+      <a href="#hero" class="topnav-logo" aria-label="David Lim — back to top">
+        <span class="wordmark-init" aria-hidden="true">DL</span>
+        <span class="wordmark">David Lim</span>
+      </a>
+      <nav class="topnav-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#repos">Open Source</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#repos">Open Source</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main>
+
+    <!-- ══════════════ HERO ══════════════ -->
+    <section id="hero">
+      <div class="hero-inner">
+        <div class="hero-avatar" aria-hidden="true">DL</div>
+        <span class="available-badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          Open to opportunities
+        </span>
+        <p class="hero-eyebrow">Finance &amp; AI Professional · Singapore</p>
+        <h1>David Lim</h1>
+        <p class="hero-tagline">
+          From RPA bots to neural networks —
+          ten years automating financial systems,
+          now building intelligent ones.
+        </p>
+        <div class="hero-links">
+          <a href="mailto:davlim86@gmail.com" class="btn">Email me</a>
+          <a href="https://github.com/DLim86" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">GitHub</a>
+          <a href="https://www.linkedin.com/in/david-lim-22814141" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">LinkedIn</a>
         </div>
       </div>
-    </aside>
+    </section>
 
-    <button class="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">
-      <span></span><span></span><span></span>
-    </button>
+    <!-- ══════════════ ABOUT ══════════════ -->
+    <section id="about">
+      <h2>About</h2>
+      <div class="prose">
+        <p>
+          With over ten years across finance, systems control, and process automation,
+          I sit at the intersection of financial operations and intelligent technology.
+          At DFS Group I established data governance frameworks and built automation
+          solutions — using Python and Power Automate — that cut manual effort across
+          invoicing, compliance, and financial reporting.
+        </p>
+        <p>
+          Earlier, at Singtel, I designed and deployed RPA bots using UiPath that
+          reengineered core finance workflows end-to-end. That experience taught me
+          that the real leverage isn't in the tool — it's in understanding the process
+          well enough to know what should never be manual in the first place.
+        </p>
+        <p>
+          I'm currently completing Singapore Institute of Technology's full-time applied
+          AI programme, including NVIDIA Deep Learning Institute modules and
+          industry-partnered AI projects. My goal: bring ML-driven intelligence to the
+          financial systems problems I know from the inside.
+        </p>
+        <p>
+          Open to roles in AI engineering, data engineering, or intelligent automation
+          where domain knowledge in finance is an advantage, not a footnote.
+        </p>
+      </div>
+    </section>
 
-    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#repos">Open Source</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <main class="main">
-
-      <!-- ═══════════ HERO ═══════════ -->
-      <section id="hero">
-        <div class="hero-inner">
-          <div class="hero-avatar" aria-hidden="true">DL</div>
-          <span class="available-badge">
-            <span class="badge-dot" aria-hidden="true"></span>
-            Open to opportunities
-          </span>
-          <p class="hero-eyebrow">Finance &amp; AI Professional · Singapore</p>
-          <h1>David Lim</h1>
-          <p class="hero-tagline">
-            From RPA bots to neural networks — ten years automating
-            financial systems, now building intelligent ones.
-          </p>
-          <div class="hero-links">
-            <a href="mailto:davlim86@gmail.com" class="btn">Email me</a>
-            <a href="https://github.com/DLim86" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">GitHub</a>
-            <a href="https://www.linkedin.com/in/david-lim-22814141" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">LinkedIn</a>
+    <!-- ══════════════ SKILLS ══════════════ -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Automation &amp; RPA</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">VBA</span>
+            <span class="skill-tag">Power Automate</span>
+            <span class="skill-tag">UiPath</span>
+            <span class="skill-tag">Orchestrator</span>
           </div>
         </div>
-      </section>
-
-      <!-- ═══════════ ABOUT ═══════════ -->
-      <section id="about">
-        <h2>About</h2>
-        <div class="prose">
-          <p>
-            With over ten years across finance, systems control, and process automation,
-            I sit at the intersection of financial operations and intelligent technology.
-            At DFS Group I established data governance frameworks and built automation
-            solutions — using Python and Power Automate — that cut manual effort across
-            invoicing, compliance, and financial reporting.
-          </p>
-          <p>
-            Earlier, at Singtel, I designed and deployed RPA bots using UiPath that
-            reengineered core finance workflows end-to-end. That experience taught me
-            that the real leverage isn't in the tool — it's in understanding the process
-            well enough to know what should never be manual in the first place.
-          </p>
-          <p>
-            I'm currently completing Singapore Institute of Technology's full-time applied
-            AI programme, including NVIDIA Deep Learning Institute modules and
-            industry-partnered AI projects. My goal: bring ML-driven intelligence to the
-            financial systems problems I know from the inside.
-          </p>
-          <p>
-            Open to roles in AI engineering, data engineering, or intelligent automation
-            where domain knowledge in finance is an advantage, not a footnote.
-          </p>
-        </div>
-      </section>
-
-      <!-- ═══════════ SKILLS ═══════════ -->
-      <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-          <div class="skill-group">
-            <h3>Automation &amp; RPA</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">VBA</span>
-              <span class="skill-tag">Power Automate</span>
-              <span class="skill-tag">UiPath</span>
-              <span class="skill-tag">Orchestrator</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <h3>Data &amp; Analytics</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Power BI</span>
-              <span class="skill-tag">SQL</span>
-              <span class="skill-tag">Excel</span>
-              <span class="skill-tag">SAP / BPC</span>
-              <span class="skill-tag">PeopleSoft</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <h3>AI &amp; Machine Learning</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Applied ML</span>
-              <span class="skill-tag">NVIDIA DLI</span>
-              <span class="skill-tag">Data Engineering</span>
-              <span class="skill-tag">scikit-learn</span>
-              <span class="skill-tag">PyTorch</span>
-            </div>
-          </div>
-          <div class="skill-group">
-            <h3>Finance &amp; Governance</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Data Governance</span>
-              <span class="skill-tag">SOD Compliance</span>
-              <span class="skill-tag">Audit Readiness</span>
-              <span class="skill-tag">Financial Reporting</span>
-              <span class="skill-tag">Access Controls</span>
-            </div>
+        <div class="skill-group">
+          <h3>Data &amp; Analytics</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Excel</span>
+            <span class="skill-tag">SAP / BPC</span>
+            <span class="skill-tag">PeopleSoft</span>
           </div>
         </div>
-      </section>
-
-      <!-- ═══════════ PROJECTS ═══════════ -->
-      <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects-list">
-          <article class="project-card">
-            <div class="project-meta"><span class="project-tag">Applied AI · SIT / NVIDIA DLI</span></div>
-            <h3>
-              <a href="https://github.com/DLim86" target="_blank" rel="noopener noreferrer">
-                Industry AI Solutions Programme
-                <span class="project-arrow" aria-hidden="true">→</span>
-              </a>
-            </h3>
-            <p class="project-desc">
-              Six-month full-time applied AI programme at Singapore Institute of Technology,
-              including two months of NVIDIA Deep Learning Institute training. Designed advanced
-              AI solutions integrating machine learning and data engineering approaches in
-              collaboration with industry partners on real-world business challenges.
-            </p>
-          </article>
-          <article class="project-card">
-            <div class="project-meta"><span class="project-tag">RPA · Singtel</span></div>
-            <h3>
-              <a href="https://github.com/DLim86" target="_blank" rel="noopener noreferrer">
-                Finance Process Automation
-                <span class="project-arrow" aria-hidden="true">→</span>
-              </a>
-            </h3>
-            <p class="project-desc">
-              Analysed and reengineered core finance processes at Singtel for end-to-end
-              automation. Designed and deployed RPA bots using UiPath and Orchestrator,
-              documented As-Is/To-Be workflows, and led UAT — eliminating significant
-              manual effort across invoicing and reconciliation.
-            </p>
-          </article>
-          <article class="project-card">
-            <div class="project-meta"><span class="project-tag">Data Governance · DFS Group</span></div>
-            <h3>
-              <a href="https://github.com/DLim86" target="_blank" rel="noopener noreferrer">
-                Finance Data Governance Framework
-                <span class="project-arrow" aria-hidden="true">→</span>
-              </a>
-            </h3>
-            <p class="project-desc">
-              Established a comprehensive data governance framework for core finance systems
-              at DFS Group. Served as single point of contact for critical IT issues during
-              financial close, led SOD compliance reviews, and built Python and Power Automate
-              solutions to improve reporting and invoicing workflows.
-            </p>
-          </article>
+        <div class="skill-group">
+          <h3>AI &amp; Machine Learning</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Applied ML</span>
+            <span class="skill-tag">NVIDIA DLI</span>
+            <span class="skill-tag">Data Engineering</span>
+            <span class="skill-tag">scikit-learn</span>
+            <span class="skill-tag">PyTorch</span>
+          </div>
         </div>
-      </section>
+        <div class="skill-group">
+          <h3>Finance &amp; Governance</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Data Governance</span>
+            <span class="skill-tag">SOD Compliance</span>
+            <span class="skill-tag">Audit Readiness</span>
+            <span class="skill-tag">Financial Reporting</span>
+            <span class="skill-tag">Access Controls</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <!-- ═══════════ REPOS ═══════════ -->
-      <section id="repos">
-        <h2>Open Source</h2>
-        <p class="section-lead">Public repositories, fetched live from GitHub.</p>
-        <div class="repos-grid" id="repos-grid">
-          <p class="repos-status" id="repos-loading" aria-live="polite" aria-busy="true">
-            Loading repositories…
+    <!-- ══════════════ PROJECTS ══════════════ -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-list">
+        <article class="project-card">
+          <div class="project-meta"><span class="project-tag">Applied AI · SIT / NVIDIA DLI</span></div>
+          <h3>
+            <a href="https://github.com/DLim86" target="_blank" rel="noopener noreferrer">
+              Industry AI Solutions Programme
+              <span class="project-arrow" aria-hidden="true">→</span>
+            </a>
+          </h3>
+          <p class="project-desc">
+            Six-month full-time applied AI programme at Singapore Institute of Technology,
+            including two months of NVIDIA Deep Learning Institute training. Designed advanced
+            AI solutions integrating machine learning and data engineering approaches in
+            collaboration with industry partners on real-world business challenges.
           </p>
-        </div>
-      </section>
+        </article>
+        <article class="project-card">
+          <div class="project-meta"><span class="project-tag">RPA · Singtel</span></div>
+          <h3>
+            <a href="https://github.com/DLim86" target="_blank" rel="noopener noreferrer">
+              Finance Process Automation
+              <span class="project-arrow" aria-hidden="true">→</span>
+            </a>
+          </h3>
+          <p class="project-desc">
+            Analysed and reengineered core finance processes at Singtel for end-to-end
+            automation. Designed and deployed RPA bots using UiPath and Orchestrator,
+            documented As-Is/To-Be workflows, and led UAT — eliminating significant
+            manual effort across invoicing and reconciliation.
+          </p>
+        </article>
+        <article class="project-card">
+          <div class="project-meta"><span class="project-tag">Data Governance · DFS Group</span></div>
+          <h3>
+            <a href="https://github.com/DLim86" target="_blank" rel="noopener noreferrer">
+              Finance Data Governance Framework
+              <span class="project-arrow" aria-hidden="true">→</span>
+            </a>
+          </h3>
+          <p class="project-desc">
+            Established a comprehensive data governance framework for core finance systems
+            at DFS Group. Served as single point of contact for critical IT issues during
+            financial close, led SOD compliance reviews, and built Python and Power Automate
+            solutions to improve reporting and invoicing workflows.
+          </p>
+        </article>
+      </div>
+    </section>
 
-      <!-- ═══════════ CONTACT ═══════════ -->
-      <section id="contact">
-        <h2>Contact</h2>
-        <p class="section-lead">The best way to reach me is email or LinkedIn. I typically respond within a day.</p>
-        <div class="contact-list">
-          <a href="mailto:davlim86@gmail.com" class="contact-item">
-            <span class="contact-label">Email</span>
-            <span class="contact-value">davlim86@gmail.com</span>
-          </a>
-          <a href="https://github.com/DLim86" target="_blank" rel="noopener noreferrer" class="contact-item">
-            <span class="contact-label">GitHub</span>
-            <span class="contact-value">github.com/DLim86</span>
-          </a>
-          <a href="https://www.linkedin.com/in/david-lim-22814141" target="_blank" rel="noopener noreferrer" class="contact-item">
-            <span class="contact-label">LinkedIn</span>
-            <span class="contact-value">linkedin.com/in/david-lim-22814141</span>
-          </a>
-        </div>
-      </section>
+    <!-- ══════════════ REPOS ══════════════ -->
+    <section id="repos">
+      <h2>Open Source</h2>
+      <p class="section-lead">Public repositories, fetched live from GitHub.</p>
+      <div class="repos-grid" id="repos-grid">
+        <p class="repos-status" id="repos-loading" aria-live="polite" aria-busy="true">
+          Loading repositories…
+        </p>
+      </div>
+    </section>
 
-    </main>
-  </div>
+    <!-- ══════════════ CONTACT ══════════════ -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="section-lead">The best way to reach me is email or LinkedIn. I typically respond within a day.</p>
+      <div class="contact-list">
+        <a href="mailto:davlim86@gmail.com" class="contact-item">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">davlim86@gmail.com</span>
+        </a>
+        <a href="https://github.com/DLim86" target="_blank" rel="noopener noreferrer" class="contact-item">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/DLim86</span>
+        </a>
+        <a href="https://www.linkedin.com/in/david-lim-22814141" target="_blank" rel="noopener noreferrer" class="contact-item">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/david-lim-22814141</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span class="footer-init" aria-hidden="true">DL</span>
+    <p>David Lim · Singapore</p>
+  </footer>
 
   <script src="main.js"></script>
 </body>
