@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="David Lim — Software Developer based in Singapore. Portfolio of projects, skills, and open source work." />
+  <meta name="description" content="David Lim — Software Developer based in Singapore. Full-stack, data pipelines, and applied ML." />
   <title>David Lim — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -35,9 +35,7 @@
     </aside>
 
     <button class="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
 
     <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
@@ -50,6 +48,7 @@
 
     <main class="main">
 
+      <!-- ═══════════ HERO ═══════════ -->
       <section id="hero">
         <div class="hero-inner">
           <div class="hero-avatar" aria-hidden="true">DL</div>
@@ -57,11 +56,12 @@
             <span class="badge-dot" aria-hidden="true"></span>
             Open to opportunities
           </span>
-          <p class="hero-eyebrow">Software Developer</p>
+          <p class="hero-eyebrow">Software Developer · Singapore</p>
           <h1>David Lim</h1>
+          <!-- UPDATE: swap tagline with your LinkedIn headline -->
           <p class="hero-tagline">
-            Building clean, purposeful software —<br />
-            from full-stack web apps to data pipelines.
+            Building clean, purposeful software —
+            full-stack web apps, backend systems, and data pipelines.
           </p>
           <div class="hero-links">
             <a href="mailto:2403858@sit.singaporetech.edu.sg" class="btn">Email me</a>
@@ -71,8 +71,10 @@
         </div>
       </section>
 
+      <!-- ═══════════ ABOUT ═══════════ -->
       <section id="about">
         <h2>About</h2>
+        <!-- UPDATE: replace with your LinkedIn About section -->
         <div class="prose">
           <p>
             I'm a software developer and IT student at Singapore Institute of Technology,
@@ -80,9 +82,9 @@
             span full-stack web development, backend systems, and applied machine learning.
           </p>
           <p>
-            I take my work seriously without overcomplicating it. Good software is software
-            that does its job cleanly — whether that's a REST API handling thousands of
-            requests or an interface that stays out of the user's way.
+            I take my work seriously without overcomplicating it. Good software does its
+            job cleanly — whether that's a REST API handling thousands of requests or an
+            interface that stays out of the user's way.
           </p>
           <p>
             I'm actively looking for software engineering roles where I can ship real
@@ -92,8 +94,10 @@
         </div>
       </section>
 
+      <!-- ═══════════ SKILLS ═══════════ -->
       <section id="skills">
         <h2>Skills</h2>
+        <!-- UPDATE: update with skills from your LinkedIn Skills section -->
         <div class="skills-grid">
           <div class="skill-group">
             <h3>Languages</h3>
@@ -139,8 +143,10 @@
         </div>
       </section>
 
+      <!-- ═══════════ PROJECTS ═══════════ -->
       <section id="projects">
         <h2>Projects</h2>
+        <!-- UPDATE: replace with real projects from your LinkedIn Experience / Projects -->
         <div class="projects-list">
           <article class="project-card">
             <div class="project-meta"><span class="project-tag">Full-stack</span></div>
@@ -152,8 +158,7 @@
             </h3>
             <p class="project-desc">
               Web app for discovering and managing campus events, built with React, Node.js,
-              and PostgreSQL. Handles real-time seat booking and automated email
-              notifications for concurrent users.
+              and PostgreSQL. Handles real-time seat booking and automated email notifications.
             </p>
           </article>
           <article class="project-card">
@@ -166,8 +171,7 @@
             </h3>
             <p class="project-desc">
               NLP pipeline that classifies customer feedback using a fine-tuned BERT model.
-              Delivered as a capstone project with an industry partner; reduced manual
-              review time significantly.
+              Delivered as a capstone with an industry partner; reduced manual review time significantly.
             </p>
           </article>
           <article class="project-card">
@@ -180,13 +184,13 @@
             </h3>
             <p class="project-desc">
               Offline-first command-line task manager in Python with a SQLite backend,
-              tag filtering, and priority sorting. Built to replace a workflow I found
-              genuinely frustrating.
+              tag filtering, and priority sorting.
             </p>
           </article>
         </div>
       </section>
 
+      <!-- ═══════════ REPOS ═══════════ -->
       <section id="repos">
         <h2>Open Source</h2>
         <p class="section-lead">Public repositories, fetched live from GitHub.</p>
@@ -197,6 +201,7 @@
         </div>
       </section>
 
+      <!-- ═══════════ CONTACT ═══════════ -->
       <section id="contact">
         <h2>Contact</h2>
         <p class="section-lead">The best way to reach me is email. I typically respond within a day.</p>
