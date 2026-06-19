@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="D. Lim — Software Developer based in Singapore. Portfolio of projects, skills, and open source work." />
+  <title>D. Lim — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout">
+
+    <aside class="sidebar" aria-label="Site navigation">
+      <div class="sidebar-inner">
+        <a href="#hero" class="wordmark" aria-label="D. Lim — back to top">D. Lim</a>
+        <nav aria-label="Sections">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#repos">Open Source</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="sidebar-links" aria-label="Quick links">
+          <a href="mailto:2403858@sit.singaporetech.edu.sg">Email</a>
+          <a href="https://github.com/DLim86" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/dlim86" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </aside>
+
+    <button class="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#repos">Open Source</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main class="main">
+
+      <section id="hero">
+        <div class="hero-inner">
+          <p class="hero-eyebrow">Software Developer</p>
+          <h1>D. Lim</h1>
+          <p class="hero-tagline">
+            Building clean, purposeful software —<br />
+            from full-stack web apps to data pipelines.
+          </p>
+          <div class="hero-links">
+            <a href="mailto:2403858@sit.singaporetech.edu.sg" class="btn">Email me</a>
+            <a href="https://github.com/DLim86" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">GitHub</a>
+            <a href="https://www.linkedin.com/in/dlim86" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>About</h2>
+        <div class="prose">
+          <p>
+            I'm a software developer and IT student at Singapore Institute of Technology,
+            focused on building things that work well and hold up over time. My interests
+            span full-stack web development, backend systems, and applied machine learning.
+          </p>
+          <p>
+            I take my work seriously without overcomplicating it. Good software is software
+            that does its job cleanly — whether that's a REST API handling thousands of
+            requests or an interface that stays out of the user's way.
+          </p>
+          <p>
+            I'm actively looking for software engineering roles where I can ship real
+            product and keep learning at pace. If you're working on something
+            interesting, let's talk.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <ul>
+              <li>Python</li>
+              <li>JavaScript / TypeScript</li>
+              <li>Java</li>
+              <li>C / C++</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Web &amp; APIs</h3>
+            <ul>
+              <li>HTML &amp; CSS</li>
+              <li>React</li>
+              <li>Node.js / Express</li>
+              <li>REST &amp; GraphQL</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Data &amp; ML</h3>
+            <ul>
+              <li>pandas / NumPy</li>
+              <li>scikit-learn</li>
+              <li>PyTorch</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Tools</h3>
+            <ul>
+              <li>Git &amp; GitHub</li>
+              <li>Docker</li>
+              <li>Linux</li>
+              <li>GitHub Actions</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-list">
+          <article class="project-card">
+            <div class="project-meta"><span class="project-tag">Full-stack</span></div>
+            <h3>
+              <a href="https://github.com/DLim86" target="_blank" rel="noopener noreferrer">
+                Campus Event Platform
+              </a>
+            </h3>
+            <p class="project-desc">
+              Web app for discovering and managing campus events, built with React, Node.js,
+              and PostgreSQL. Handles real-time seat booking and automated email
+              notifications for concurrent users.
+            </p>
+          </article>
+          <article class="project-card">
+            <div class="project-meta"><span class="project-tag">Machine Learning</span></div>
+            <h3>
+              <a href="https://github.com/DLim86" target="_blank" rel="noopener noreferrer">
+                Feedback Classifier
+              </a>
+            </h3>
+            <p class="project-desc">
+              NLP pipeline that classifies customer feedback using a fine-tuned BERT model.
+              Delivered as a capstone project with an industry partner; reduced manual
+              review time significantly.
+            </p>
+          </article>
+          <article class="project-card">
+            <div class="project-meta"><span class="project-tag">CLI Tool</span></div>
+            <h3>
+              <a href="https://github.com/DLim86" target="_blank" rel="noopener noreferrer">
+                Task Tracker CLI
+              </a>
+            </h3>
+            <p class="project-desc">
+              Offline-first command-line task manager in Python with a SQLite backend,
+              tag filtering, and priority sorting. Built to replace a workflow I found
+              genuinely frustrating.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="repos">
+        <h2>Open Source</h2>
+        <p class="section-lead">Public repositories, fetched live from GitHub.</p>
+        <div class="repos-grid" id="repos-grid">
+          <p class="repos-status" id="repos-loading" aria-live="polite" aria-busy="true">
+            Loading repositories…
+          </p>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p class="section-lead">The best way to reach me is email. I typically respond within a day.</p>
+        <div class="contact-list">
+          <a href="mailto:2403858@sit.singaporetech.edu.sg" class="contact-item">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">2403858@sit.singaporetech.edu.sg</span>
+          </a>
+          <a href="https://github.com/DLim86" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/DLim86</span>
+          </a>
+          <a href="https://www.linkedin.com/in/dlim86" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">linkedin.com/in/dlim86</span>
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
