@@ -3,6 +3,13 @@
 Plain HTML/CSS plus a little vanilla JS. No frameworks, no build step.
 Deploy: push to `main`, GitHub Actions publishes to GitHub Pages automatically.
 
+This CLAUDE.md and everything below governs **`public/` only**. The repo also
+contains `cinematic-portfolio/`, a separate Next.js/GSAP project with its own
+stack, its own `README.md`, and its own conventions — the "no frameworks,
+zero dependencies" rule here does not apply there. Both are built by
+`.github/workflows/deploy.yml` into one GitHub Pages deploy: `public/` serves
+the site root, `cinematic-portfolio/` serves `/cinematic/`.
+
 ## Quick orientation
 
 - All site files live in `public/` — that is the only folder deployed.

@@ -1,6 +1,9 @@
 # Dependencies
 node_modules/
 
+# combined build output for GitHub Pages (assembled in CI, see .github/workflows/deploy.yml)
+/dist/
+
 # macOS
 .DS_Store
 .AppleDouble

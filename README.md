@@ -12,6 +12,8 @@ public/   ← all site files (HTML, CSS, JS, assets)
 
 [https://dlim86.github.io/D-site/](https://dlim86.github.io/D-site/)
 
+A second, cinematic version of the portfolio (Next.js/GSAP, see [cinematic-portfolio/](cinematic-portfolio/)) is deployed alongside it at [https://dlim86.github.io/D-site/cinematic/](https://dlim86.github.io/D-site/cinematic/).
+
 ## Deploy
 
-Push to `main`. GitHub Actions publishes the `public/` directory to GitHub Pages automatically.
+Push to `main`. GitHub Actions (`.github/workflows/deploy.yml`) builds `cinematic-portfolio/` as a static export and publishes it together with `public/` to GitHub Pages: `public/` serves the root, the cinematic build serves `/cinematic/`.
