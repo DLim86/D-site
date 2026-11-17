@@ -1,12 +1,12 @@
-# David Lim — Cinematic Portfolio
+# David Lim | Cinematic Portfolio
 
-A cinematic, scroll-choreographed single-page portfolio for David Lim (finance systems → applied AI). This is a **separate project** from the zero-dependency site in the repo's `public/` folder — it intentionally uses a different, heavier stack (Next.js, GSAP, Framer Motion) that `public/`'s own `CLAUDE.md` explicitly forbids for that project. Keep the two apart.
+A cinematic single-page portfolio for David Lim. It includes a browser-based finance workflow with sample data and an article on AI deployment with a model-memory estimator. The zero-dependency site in the root `public/` folder is a separate project.
 
 ## Stack
 
 - Next.js 16 (App Router) + TypeScript
 - Tailwind CSS v4 (CSS-based `@theme`, no `tailwind.config.js`)
-- GSAP + ScrollTrigger — the pinned "Expertise" scroll sequence
+- React state and CSS transitions for the finance demo and estimator
 - Framer Motion — entrance/whileInView transitions, mobile nav
 - No component library, no CMS, no backend
 
@@ -46,12 +46,11 @@ src/
   app/
     layout.tsx       fonts (Fraunces/Inter/JetBrains Mono), metadata, <Nav>
     page.tsx          assembles all sections in order
-    globals.css       design tokens (colors, easing) + fallback gradient keyframes
+    globals.css       design tokens, controls and transitions
   components/          one file per section, each self-contained
   lib/
     content.ts         all page copy — edit this to change text, no JSX hunting
     motion.ts           shared easing/duration/stagger constants
-    gsap.ts             registers ScrollTrigger once, client-side only
     useReducedMotion.ts  prefers-reduced-motion hook (useSyncExternalStore)
 public/
   videos/               hero.mp4/webm, closing.mp4/webm — see docs/video-assets.md
@@ -63,31 +62,30 @@ assets-source/          uncompressed original footage, gitignored, not served
 
 ## Content
 
-All copy lives in `src/lib/content.ts`, sourced from David's résumé — update it there rather than editing JSX. Section anchors: `#hero #about #expertise #approach #results #contact`.
+Portfolio copy uses `src/lib/content.ts`. The workflow examples are in `src/components/InterfaceCard.tsx`, and the article is in `src/components/FieldNotes.tsx`. Section anchors are `#hero #about #expertise #approach #results #field-notes #contact`.
 
 ## Video assets
 
 `public/videos/hero.mp4|webm` and `closing.mp4|webm` are a **stand-in cinematic loop** (compressed from a sample source clip), used to demonstrate the hero/pinned-media motion end to end — not final brand content. See `docs/video-assets.md` for the ffmpeg recipe to swap in real footage, and `.gitignore` excludes the 51MB uncompressed original in `assets-source/`.
 
-If a video is missing or fails to load, `CinematicMedia` (`src/components/CinematicMedia.tsx`) falls back to an animated CSS gradient — no broken video icon, no blank panel.
+Background videos pause outside the viewport and when the browser tab is hidden. Reduced-motion visitors start with the poster and can play the video manually. A media error shows a static gradient.
 
 ## Animation map
 
 | Trigger | Element | Animation | Duration / range |
 |---|---|---|---|
-| Mount | Hero video | Scale 1.05 → 1 | 1.6s, `power2.out` |
 | Mount, staggered | Hero eyebrow / headline lines / body / CTAs | Fade + rise, headline lines mask-reveal from `y:110%` | 0.5–1.2s, delays 0.15–1.4s |
 | Scroll (own section, 0→100% of hero height) | Hero content | Opacity 1→0, y 0→-60 | Framer `useScroll`, scrubbed |
 | Scroll (same range) | Hero overlay gradient | Opacity 0.55→0.92 (darkens) | Framer `useScroll`, scrubbed |
 | `whileInView`, once | Brand Statement lines | Blur(6px)→0, opacity 0.15→1, staggered | 1.2s/line, 0.16s stagger |
-| Scroll (pinned, 200% of viewport height) | Expertise section | Section pins; text panels crossfade with a blur+gap (no overlap), interface cards crossfade opacity/scale/blur behind them | GSAP `ScrollTrigger`, `scrub:1`, 2 transitions × 1 unit |
+| Click or arrow key | Finance workflow | The active tab indicator slides and the selected panel enters inside the same frame | 380ms CSS transition |
 | `whileInView`, once | Approach grid cards | Fade + rise, staggered 0.1s | 0.8s |
 | `whileInView`, once | Results metrics | Fade + rise, staggered 0.1s | 0.8s |
 | `whileInView`, once | Final split-screen heading/body | Fade + rise | 0.8–1.2s |
 | `whileInView`, once | CTA heading/body/buttons | Fade + rise, staggered delays | 0.8–1.2s |
 | Click | Mobile nav toggle | Full-screen overlay fade in/out, links stagger in | 0.4s + 0.05s/item |
 
-All durations/easing pull from `src/lib/motion.ts` (`EASE_PREMIUM = cubic-bezier(0.16, 1, 0.3, 1)`). Every animated component checks `useReducedMotion()` and either skips the animation or renders a static, fully-legible fallback (see `FeatureStory.tsx`'s non-pinned branch).
+React entrance motion uses `src/lib/motion.ts` and respects the reduced-motion preference. The workflow controls and estimator remain usable with CSS transitions disabled.
 
 ## Known gaps / next steps
 

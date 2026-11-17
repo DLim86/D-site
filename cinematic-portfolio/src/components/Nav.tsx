@@ -4,8 +4,10 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { nav, site } from "@/lib/content";
 import { EASE_PREMIUM } from "@/lib/motion";
+import { useReducedMotion } from "@/lib/useReducedMotion";
 
 export default function Nav() {
+  const reducedMotion = useReducedMotion();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -26,7 +28,7 @@ export default function Nav() {
   return (
     <>
       <motion.header
-        initial={{ opacity: 0, y: -16 }}
+        initial={reducedMotion ? false : { opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 0.4, ease: EASE_PREMIUM }}
         className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
@@ -85,9 +87,9 @@ export default function Nav() {
         {open && (
           <motion.div
             id="mobile-nav"
-            initial={{ opacity: 0 }}
+            initial={reducedMotion ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            exit={reducedMotion ? undefined : { opacity: 0 }}
             transition={{ duration: 0.4, ease: EASE_PREMIUM }}
             className="fixed inset-0 z-40 flex flex-col bg-void pt-24 md:hidden"
           >
@@ -95,7 +97,7 @@ export default function Nav() {
               {nav.map((item, i) => (
                 <motion.a
                   key={item.href}
-                  initial={{ opacity: 0, y: 16 }}
+                  initial={reducedMotion ? false : { opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.05 * i, ease: EASE_PREMIUM }}
                   href={item.href}
@@ -106,7 +108,7 @@ export default function Nav() {
                 </motion.a>
               ))}
               <motion.a
-                initial={{ opacity: 0, y: 16 }}
+                initial={reducedMotion ? false : { opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.05 * nav.length, ease: EASE_PREMIUM }}
                 href="#contact"

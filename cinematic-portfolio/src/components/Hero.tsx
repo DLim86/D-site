@@ -37,17 +37,17 @@ export default function Hero() {
 
       <motion.div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-t from-void via-void/60 to-void/10"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-void via-void/60 to-void/10"
         style={reducedMotion ? undefined : { opacity: darken }}
       />
-      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-void/70 via-transparent to-transparent" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-b from-void/70 via-transparent to-transparent" />
 
       <motion.div
         style={reducedMotion ? undefined : { opacity: contentOpacity, y: contentY }}
         className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-20 pt-40 lg:px-10 lg:pb-28"
       >
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
+          initial={reducedMotion ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: DURATION.base, delay: 0.15, ease: EASE_PREMIUM }}
           className="mb-6 font-mono text-xs uppercase tracking-[0.2em] text-accent"
@@ -56,7 +56,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.h1
-          initial="initial"
+          initial={reducedMotion ? false : "initial"}
           animate="animate"
           variants={{ animate: { transition: { staggerChildren: STAGGER.base, delayChildren: 0.3 } } }}
           className="max-w-4xl font-display text-[clamp(2.25rem,6vw,4.75rem)] leading-[1.05] tracking-tight text-primary"
@@ -77,7 +77,7 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
+          initial={reducedMotion ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: DURATION.base, delay: 0.9, ease: EASE_PREMIUM }}
           className="mt-8 max-w-xl text-balance text-lg leading-relaxed text-secondary"
@@ -86,7 +86,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={reducedMotion ? false : { opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: DURATION.base, delay: 1.05, ease: EASE_PREMIUM }}
           className="mt-10 flex flex-wrap items-center gap-6"
@@ -107,7 +107,7 @@ export default function Hero() {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0 }}
+        initial={reducedMotion ? false : { opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: DURATION.base, delay: 1.4, ease: EASE_PREMIUM }}
         className="pointer-events-none absolute inset-x-0 bottom-6 z-10 flex justify-center"

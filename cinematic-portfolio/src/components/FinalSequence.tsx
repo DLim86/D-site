@@ -4,8 +4,10 @@ import { motion } from "framer-motion";
 import CinematicMedia from "./CinematicMedia";
 import { finalSequence } from "@/lib/content";
 import { DURATION, EASE_PREMIUM } from "@/lib/motion";
+import { useReducedMotion } from "@/lib/useReducedMotion";
 
 export default function FinalSequence() {
+  const reducedMotion = useReducedMotion();
   return (
     <section aria-labelledby="final-heading" className="relative grid grid-cols-1 bg-void lg:grid-cols-2">
       <div className="relative h-[50vh] lg:h-auto lg:min-h-[560px]">
@@ -15,13 +17,13 @@ export default function FinalSequence() {
           poster="/media/closing-poster.jpg"
           tone="slate"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-void via-transparent to-transparent lg:bg-gradient-to-r" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-void via-transparent to-transparent lg:bg-gradient-to-r" />
       </div>
 
       <div className="flex items-center px-6 py-20 lg:px-16 lg:py-0">
         <div className="max-w-lg">
           <motion.p
-            initial={{ opacity: 0, y: 12 }}
+            initial={reducedMotion ? false : { opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10% 0px" }}
             transition={{ duration: DURATION.base, ease: EASE_PREMIUM }}
@@ -31,7 +33,7 @@ export default function FinalSequence() {
           </motion.p>
           <motion.h2
             id="final-heading"
-            initial={{ opacity: 0, y: 20 }}
+            initial={reducedMotion ? false : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10% 0px" }}
             transition={{ duration: DURATION.slow, delay: 0.1, ease: EASE_PREMIUM }}
@@ -40,7 +42,7 @@ export default function FinalSequence() {
             {finalSequence.heading}
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 16 }}
+            initial={reducedMotion ? false : { opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10% 0px" }}
             transition={{ duration: DURATION.base, delay: 0.25, ease: EASE_PREMIUM }}

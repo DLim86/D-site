@@ -3,13 +3,15 @@
 import { motion } from "framer-motion";
 import { cta, site } from "@/lib/content";
 import { DURATION, EASE_PREMIUM } from "@/lib/motion";
+import { useReducedMotion } from "@/lib/useReducedMotion";
 
 export default function CTAFooter() {
+  const reducedMotion = useReducedMotion();
   return (
     <footer id="contact" className="relative bg-elevated px-6 pb-10 pt-28 lg:px-10 lg:pt-40">
       <div className="mx-auto max-w-4xl text-center">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+          initial={reducedMotion ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10% 0px" }}
           transition={{ duration: DURATION.slow, ease: EASE_PREMIUM }}
@@ -18,7 +20,7 @@ export default function CTAFooter() {
           {cta.heading}
         </motion.h2>
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
+          initial={reducedMotion ? false : { opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10% 0px" }}
           transition={{ duration: DURATION.base, delay: 0.15, ease: EASE_PREMIUM }}
@@ -28,7 +30,7 @@ export default function CTAFooter() {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={reducedMotion ? false : { opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10% 0px" }}
           transition={{ duration: DURATION.base, delay: 0.3, ease: EASE_PREMIUM }}

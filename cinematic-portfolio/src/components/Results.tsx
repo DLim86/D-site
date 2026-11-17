@@ -3,14 +3,16 @@
 import { motion } from "framer-motion";
 import { results } from "@/lib/content";
 import { DURATION, EASE_PREMIUM, STAGGER } from "@/lib/motion";
+import { useReducedMotion } from "@/lib/useReducedMotion";
 
 export default function Results() {
+  const reducedMotion = useReducedMotion();
   return (
     <section id="results" aria-labelledby="results-heading" className="bg-elevated px-6 py-28 lg:px-10 lg:py-36">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 max-w-2xl">
           <motion.p
-            initial={{ opacity: 0, y: 12 }}
+            initial={reducedMotion ? false : { opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10% 0px" }}
             transition={{ duration: DURATION.base, ease: EASE_PREMIUM }}
@@ -20,7 +22,7 @@ export default function Results() {
           </motion.p>
           <motion.h2
             id="results-heading"
-            initial={{ opacity: 0, y: 16 }}
+            initial={reducedMotion ? false : { opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10% 0px" }}
             transition={{ duration: DURATION.base, delay: 0.1, ease: EASE_PREMIUM }}
@@ -31,7 +33,7 @@ export default function Results() {
         </div>
 
         <motion.dl
-          initial="initial"
+          initial={reducedMotion ? false : "initial"}
           whileInView="animate"
           viewport={{ once: true, margin: "-10% 0px" }}
           variants={{ animate: { transition: { staggerChildren: STAGGER.base } } }}
@@ -47,14 +49,14 @@ export default function Results() {
             >
               <dt className="sr-only">{metric.label}</dt>
               <dd className="font-display text-4xl text-accent lg:text-5xl">{metric.value}</dd>
-              <p className="mt-2 font-mono text-xs uppercase tracking-[0.12em] text-primary">{metric.label}</p>
-              <p className="mt-1 text-sm leading-relaxed text-secondary">{metric.context}</p>
+              <dd className="mt-2 font-mono text-xs uppercase tracking-[0.12em] text-primary" aria-hidden="true">{metric.label}</dd>
+              <dd className="mt-1 text-sm leading-relaxed text-secondary">{metric.context}</dd>
             </motion.div>
           ))}
         </motion.dl>
 
         <motion.blockquote
-          initial={{ opacity: 0, y: 16 }}
+          initial={reducedMotion ? false : { opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-10% 0px" }}
           transition={{ duration: DURATION.base, delay: 0.15, ease: EASE_PREMIUM }}

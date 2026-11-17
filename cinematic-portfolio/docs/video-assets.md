@@ -38,4 +38,4 @@ ffmpeg -i hero.mp4 -frames:v 1 -q:v 4 ../media/hero-poster.jpg
 
 ## Fallback behavior
 
-If a video file is missing, fails to load, or autoplay is blocked, `CinematicMedia` catches the error and renders an animated CSS gradient instead (`.gradient-fallback-amber` / `.gradient-fallback-slate` in `globals.css`) — the page never shows a broken video icon or blank panel.
+If a video fails to load, `CinematicMedia` renders a static CSS gradient. When autoplay is blocked or reduced motion is enabled, the poster remains visible and the visitor can start playback manually.

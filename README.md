@@ -17,3 +17,8 @@ A second, cinematic version of the portfolio (Next.js/GSAP, see [cinematic-portf
 ## Deploy
 
 Push to `main`. GitHub Actions (`.github/workflows/deploy.yml`) builds `cinematic-portfolio/` as a static export and publishes it together with `public/` to GitHub Pages: `public/` serves the root, the cinematic build serves `/cinematic/`.
+
+## Contributors
+
+- [David Lim](https://github.com/DLim86) created and maintains the portfolio.
+- [Codex](https://github.com/codex) contributed the interactive finance demo, AI notes and accessibility improvements.

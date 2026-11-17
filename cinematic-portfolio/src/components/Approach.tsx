@@ -3,14 +3,16 @@
 import { motion } from "framer-motion";
 import { approach } from "@/lib/content";
 import { DURATION, EASE_PREMIUM, STAGGER } from "@/lib/motion";
+import { useReducedMotion } from "@/lib/useReducedMotion";
 
 export default function Approach() {
+  const reducedMotion = useReducedMotion();
   return (
     <section id="approach" aria-labelledby="approach-heading" className="bg-void px-6 py-28 lg:px-10 lg:py-36">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 max-w-2xl">
           <motion.p
-            initial={{ opacity: 0, y: 12 }}
+            initial={reducedMotion ? false : { opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10% 0px" }}
             transition={{ duration: DURATION.base, ease: EASE_PREMIUM }}
@@ -20,7 +22,7 @@ export default function Approach() {
           </motion.p>
           <motion.h2
             id="approach-heading"
-            initial={{ opacity: 0, y: 16 }}
+            initial={reducedMotion ? false : { opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-10% 0px" }}
             transition={{ duration: DURATION.base, delay: 0.1, ease: EASE_PREMIUM }}
@@ -31,7 +33,7 @@ export default function Approach() {
         </div>
 
         <motion.div
-          initial="initial"
+          initial={reducedMotion ? false : "initial"}
           whileInView="animate"
           viewport={{ once: true, margin: "-10% 0px" }}
           variants={{ animate: { transition: { staggerChildren: STAGGER.base } } }}
@@ -48,6 +50,10 @@ export default function Approach() {
             >
               <h3 className="mb-3 font-display text-xl text-primary">{card.title}</h3>
               <p className="text-sm leading-relaxed text-secondary">{card.description}</p>
+              <details className="mt-5 border-t border-hairline pt-3">
+                <summary className="min-h-8 cursor-pointer text-sm font-medium text-accent">How I applied it</summary>
+                <p className="pt-2 text-sm leading-relaxed text-secondary">{card.example}</p>
+              </details>
             </motion.div>
           ))}
         </motion.div>

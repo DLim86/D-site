@@ -9,18 +9,18 @@ export const site = {
 
 export const nav = [
   { label: "About", href: "#about" },
-  { label: "Expertise", href: "#expertise" },
+  { label: "Demo", href: "#expertise" },
   { label: "Approach", href: "#approach" },
   { label: "Results", href: "#results" },
-  { label: "Contact", href: "#contact" },
+  { label: "AI notes", href: "#field-notes" },
 ];
 
 export const hero = {
   eyebrow: "Finance Systems · Applied AI · Singapore",
   headline: ["Ten years automating", "financial systems.", "Now building the", "intelligence behind them."],
   body: "I spent a decade in finance operations, governance, and RPA, redesigning processes to address recurring problems. I'm now completing an applied AI programme to bring that same discipline to machine learning.",
-  ctaPrimary: { label: "Get in Touch", href: "#contact" },
-  ctaSecondary: { label: "View experience", href: "#about" },
+  ctaPrimary: { label: "Try the finance demo", href: "#expertise" },
+  ctaSecondary: { label: "Read my AI notes", href: "#field-notes" },
 };
 
 export const brandStatement = {
@@ -34,7 +34,7 @@ export const brandStatement = {
 };
 
 export type Pillar = {
-  id: string;
+  id: "governance" | "automation" | "applied-ai";
   tag: string;
   title: string;
   description: string;
@@ -44,8 +44,8 @@ export type Pillar = {
 export const pillars: Pillar[] = [
   {
     id: "governance",
-    tag: "01 · Governance",
-    title: "Data governance, built to survive an audit",
+    tag: "Access review",
+    title: "Keep sensitive duties separate.",
     description:
       "At DFS Group I led user access governance and annual reviews across core finance systems. I was the point of contact with IT during financial close and handled SOD compliance and audit readiness.",
     metrics: [
@@ -55,24 +55,24 @@ export const pillars: Pillar[] = [
   },
   {
     id: "automation",
-    tag: "02 · Automation",
-    title: "Process automation, from first analysis to deployed bot",
+    tag: "Invoice matching",
+    title: "Make the exceptions visible.",
     description:
       "At Singtel I analysed and reengineered finance processes end-to-end, then designed and deployed RPA bots with UiPath and Orchestrator. I documented As-Is/To-Be states and ran UAT.",
     metrics: [
-      { label: "Efficiency gain", value: "+40%" },
-      { label: "Tooling", value: "UiPath · Power Automate" },
+      { label: "Built with", value: "UiPath and Orchestrator" },
+      { label: "Validated through", value: "User acceptance testing" },
     ],
   },
   {
     id: "applied-ai",
-    tag: "03 · Applied AI",
-    title: "Machine learning, grounded in real financial workflows",
+    tag: "Policy answers",
+    title: "Show the evidence behind an answer.",
     description:
-      "I'm completing a six-month full-time applied AI programme at the Singapore Institute of Technology, including NVIDIA Deep Learning Institute modules, building ML and data-engineering solutions with industry partners.",
+      "During my SIT SNAIC attachment, I worked on a retrieval-augmented assistant at WizVision. I designed it to cite supporting passages and flag questions it could not answer from the available material.",
     metrics: [
-      { label: "Programme", value: "SIT · NVIDIA DLI" },
-      { label: "Duration", value: "6 months, full-time" },
+      { label: "Programme", value: "SIT SNAIC" },
+      { label: "Project focus", value: "Retrieval and citations" },
     ],
   },
 ];
@@ -80,6 +80,7 @@ export const pillars: Pillar[] = [
 export type ApproachCard = {
   title: string;
   description: string;
+  example: string;
 };
 
 export const approach: { kicker: string; heading: string; cards: ApproachCard[] } = {
@@ -90,21 +91,25 @@ export const approach: { kicker: string; heading: string; cards: ApproachCard[] 
       title: "Reads a finance system like an insider",
       description:
         "Ten years working with SAP, PeopleSoft, BPC, and Blackline taught me where financial data can break in practice.",
+      example: "For financial statement casting, I built a check that recomputes totals. A reviewer can trace a mismatch back to its source rather than accept a plausible-looking report.",
     },
     {
-      title: "Automates the process, not just the task",
+      title: "Automates whole workflows",
       description:
         "RPA deployments taught me to reengineer the workflow first. A model bolted onto a broken process just fails faster.",
+      example: "For invoice matching at DFS Group, I used Python and OCR to compare PDFs with system records and make the result available to finance users for review.",
     },
     {
       title: "Treats governance as a feature",
       description:
         "I've owned SOD compliance and audit readiness end-to-end. Both matter when machine learning uses financial data.",
+      example: "I coordinated finance-system access reviews and worked with IT during close. A workflow has to show who can change data and who reviews the result.",
     },
     {
-      title: "Ships and trains, not just prototypes",
+      title: "Deploys tools and trains the team",
       description:
         "I've trained 50+ employees on new tooling. Technology only counts once the people using it can rely on it.",
+      example: "In Power Automate workshops, I helped colleagues build automations they could run and maintain on their own.",
     },
   ],
 };
@@ -119,7 +124,7 @@ export const results: { kicker: string; heading: string; metrics: Metric[]; stat
   kicker: "Evidence",
   heading: "What ten years in the systems actually produced",
   metrics: [
-    { value: "40%", label: "Automation efficiency", context: "Process gain from strategic RPA implementation at Singtel" },
+    { value: "2", label: "Finance checks built", context: "Invoice matching and financial statement casting at DFS Group" },
     { value: "50+", label: "Employees trained", context: "Power Automate workshops run across teams at DFS Group" },
     { value: "10+", label: "Years in finance systems", context: "Cost control, income audit, reporting, and governance roles" },
     { value: "6", label: "Months, applied AI", context: "Full-time SIT programme with NVIDIA DLI modules" },

@@ -3,13 +3,15 @@
 import { motion } from "framer-motion";
 import { brandStatement } from "@/lib/content";
 import { DURATION, EASE_PREMIUM, STAGGER } from "@/lib/motion";
+import { useReducedMotion } from "@/lib/useReducedMotion";
 
 export default function BrandStatement() {
+  const reducedMotion = useReducedMotion();
   return (
     <section id="about" aria-labelledby="brand-statement-heading" className="relative bg-void px-6 py-32 lg:px-10 lg:py-44">
       <div className="mx-auto max-w-5xl">
         <motion.p
-          initial={{ opacity: 0, y: 12 }}
+          initial={reducedMotion ? false : { opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-15% 0px" }}
           transition={{ duration: DURATION.base, ease: EASE_PREMIUM }}
@@ -20,7 +22,7 @@ export default function BrandStatement() {
 
         <motion.h2
           id="brand-statement-heading"
-          initial="initial"
+          initial={reducedMotion ? false : "initial"}
           whileInView="animate"
           viewport={{ once: true, margin: "-15% 0px" }}
           variants={{ animate: { transition: { staggerChildren: STAGGER.loose } } }}
