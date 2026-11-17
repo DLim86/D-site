@@ -21,4 +21,5 @@ Push to `main`. GitHub Actions (`.github/workflows/deploy.yml`) builds `cinemati
 ## Contributors
 
 - [David Lim](https://github.com/DLim86) created and maintains the portfolio.
+- [Claude](https://github.com/claude) contributed the original cinematic portfolio and its media workflow.
 - [Codex](https://github.com/codex) contributed the interactive finance demo, AI notes and accessibility improvements.
