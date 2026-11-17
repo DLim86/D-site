@@ -1,15 +1,15 @@
 const cardContent: Record<string, { title: string; rows: { label: string; status: string; tone: "ok" | "warn" | "info" }[] }> = {
   governance: {
-    title: "Access Review — Q2 Close",
+    title: "Access Review · Q2 Close",
     rows: [
-      { label: "GL — Journal posting", status: "Reviewed", tone: "ok" },
-      { label: "AP — Vendor master", status: "Flagged", tone: "warn" },
-      { label: "BPC — Consolidation", status: "Reviewed", tone: "ok" },
+      { label: "GL journal posting", status: "Reviewed", tone: "ok" },
+      { label: "AP vendor master", status: "Flagged", tone: "warn" },
+      { label: "BPC consolidation", status: "Reviewed", tone: "ok" },
       { label: "SOD conflict scan", status: "Passed", tone: "ok" },
     ],
   },
   automation: {
-    title: "Invoice Bot — Run #482",
+    title: "Invoice Bot · Run #482",
     rows: [
       { label: "Extract line items", status: "Done", tone: "ok" },
       { label: "Match PO / GRN", status: "Done", tone: "ok" },
@@ -18,7 +18,7 @@ const cardContent: Record<string, { title: string; rows: { label: string; status
     ],
   },
   "applied-ai": {
-    title: "Model — anomaly-detector v0.3",
+    title: "Model · anomaly-detector v0.3",
     rows: [
       { label: "Precision", status: "0.94", tone: "ok" },
       { label: "Recall", status: "0.89", tone: "ok" },

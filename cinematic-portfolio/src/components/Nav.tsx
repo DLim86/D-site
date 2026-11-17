@@ -37,7 +37,7 @@ export default function Nav() {
         <a
           href="#hero"
           className="font-display text-lg tracking-tight text-primary"
-          aria-label={`${site.name} — back to top`}
+          aria-label={`Back to the top of ${site.name}'s portfolio`}
         >
           DL
         </a>

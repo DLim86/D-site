@@ -18,7 +18,7 @@ export const nav = [
 export const hero = {
   eyebrow: "Finance Systems · Applied AI · Singapore",
   headline: ["Ten years automating", "financial systems.", "Now building the", "intelligence behind them."],
-  body: "I spent a decade inside finance operations, governance, and RPA — reengineering the processes most people only patch. I'm now completing an applied AI programme to bring that same discipline to machine learning.",
+  body: "I spent a decade in finance operations, governance, and RPA, redesigning processes to address recurring problems. I'm now completing an applied AI programme to bring that same discipline to machine learning.",
   ctaPrimary: { label: "Get in Touch", href: "#contact" },
   ctaSecondary: { label: "View experience", href: "#about" },
 };
@@ -44,10 +44,10 @@ export type Pillar = {
 export const pillars: Pillar[] = [
   {
     id: "governance",
-    tag: "01 — Governance",
+    tag: "01 · Governance",
     title: "Data governance, built to survive an audit",
     description:
-      "At DFS Group I lead user access governance and annual reviews across core finance systems — the single point of contact with IT during financial close, responsible for SOD compliance and audit readiness.",
+      "At DFS Group I led user access governance and annual reviews across core finance systems. I was the point of contact with IT during financial close and handled SOD compliance and audit readiness.",
     metrics: [
       { label: "Systems governed", value: "Core finance stack" },
       { label: "Focus", value: "SOD · Audit readiness" },
@@ -55,10 +55,10 @@ export const pillars: Pillar[] = [
   },
   {
     id: "automation",
-    tag: "02 — Automation",
+    tag: "02 · Automation",
     title: "Process automation, from first analysis to deployed bot",
     description:
-      "At Singtel I analysed and reengineered finance processes end-to-end, then designed and deployed RPA bots with UiPath and Orchestrator — documenting As-Is/To-Be states and running UAT myself.",
+      "At Singtel I analysed and reengineered finance processes end-to-end, then designed and deployed RPA bots with UiPath and Orchestrator. I documented As-Is/To-Be states and ran UAT.",
     metrics: [
       { label: "Efficiency gain", value: "+40%" },
       { label: "Tooling", value: "UiPath · Power Automate" },
@@ -66,7 +66,7 @@ export const pillars: Pillar[] = [
   },
   {
     id: "applied-ai",
-    tag: "03 — Applied AI",
+    tag: "03 · Applied AI",
     title: "Machine learning, grounded in real financial workflows",
     description:
       "I'm completing a six-month full-time applied AI programme at the Singapore Institute of Technology, including NVIDIA Deep Learning Institute modules, building ML and data-engineering solutions with industry partners.",
@@ -89,7 +89,7 @@ export const approach: { kicker: string; heading: string; cards: ApproachCard[] 
     {
       title: "Reads a finance system like an insider",
       description:
-        "Ten years across SAP, PeopleSoft, BPC, and Blackline means I know where financial data actually breaks — not just what the schema says.",
+        "Ten years working with SAP, PeopleSoft, BPC, and Blackline taught me where financial data can break in practice.",
     },
     {
       title: "Automates the process, not just the task",
@@ -99,7 +99,7 @@ export const approach: { kicker: string; heading: string; cards: ApproachCard[] 
     {
       title: "Treats governance as a feature",
       description:
-        "SOD compliance and audit readiness aren't afterthoughts — they're requirements I've owned end-to-end, which matters the moment ML touches financial data.",
+        "I've owned SOD compliance and audit readiness end-to-end. Both matter when machine learning uses financial data.",
     },
     {
       title: "Ships and trains, not just prototypes",
@@ -125,7 +125,7 @@ export const results: { kicker: string; heading: string; metrics: Metric[]; stat
     { value: "6", label: "Months, applied AI", context: "Full-time SIT programme with NVIDIA DLI modules" },
   ],
   statement:
-    "“The real leverage isn't in the tool — it's in understanding the process well enough to know what should never be manual in the first place.”",
+    "“Real leverage comes from understanding the process well enough to know what should never be manual in the first place.”",
 };
 
 export const finalSequence = {
@@ -136,7 +136,7 @@ export const finalSequence = {
 
 export const cta = {
   heading: "Let's build the next automation.",
-  body: "The fastest way to reach me is email or LinkedIn — I typically respond within a day.",
+  body: "The fastest way to reach me is email or LinkedIn. I typically respond within a day.",
   primary: { label: "Email David", href: `mailto:${site.email}` },
   secondary: [
     { label: "GitHub", href: site.github },

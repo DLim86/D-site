@@ -26,9 +26,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "David Lim — Finance Systems & Applied AI",
+  title: "David Lim | Finance Systems & Applied AI",
   description:
-    "David Lim — ten years automating financial systems in Singapore, now completing an applied AI programme. Available for AI engineering, data engineering, and intelligent automation roles.",
+    "David Lim has ten years of experience automating financial systems in Singapore and is completing an applied AI programme. Available for AI engineering, data engineering, and intelligent automation roles.",
 };
 
 export const viewport: Viewport = {
